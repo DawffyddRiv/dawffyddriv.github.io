@@ -1,0 +1,431 @@
+{
+    margin:0; /* El contenido dentro de las llaves hace que se ya no tenga márgenes*/
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: sans-serif;/*Pendiente, ver minuto 30* */
+    line-height: 1.5;
+}
+
+.contenedor{ /*esto parece pertenecer a la galeria de imagenes*/
+    padding: 50px 0 ; /*Da un espacio entre contenedores de 60pixeles de alto (y cero de ancho,creo)*/
+    width: 90%; 
+    max-width: 1000px;
+    margin: auto;/*Esto centra todo lo que tenga la clase contenedor*/
+    overflow: hidden;/*Si algo se quiere salir del contenedor, lo oculta*/
+}
+.titulo{/*Esto parece pertenecer al titulo de about me*/
+    color: hsla(210, 100%, 13%, 0.796);
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;/*margin bottom para dividir del contenido de cada sección*/
+}
+/*Header*/
+header{ /*minuto 32:57*/
+width: 100%;  /*El background se obtuvo de  https://uigradients.com/#PinotNoir*/
+height: 630px;
+background: hsla(210, 100%, 13%, 0.527);  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, hsla(210, 100%, 13%, 0.24), hsla(210, 100%, 13%, 0.61));  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, hsla(210, 100%, 13%, 0.603), hsla(210, 100%, 13%, 0.603)),url(../imgabe/business-data-analysis_rawpixel.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-size: cover;
+background-attachment: fixed;
+position: relative;
+
+}
+nav{/*Es el menú de Inicio, Acerca de, Proyectos*/
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+nav > a {
+    color: white;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;/*Margen derecho de cada elemento de 10 pixeles*/
+}
+nav > a:hover{
+    text-decoration: underline; /*Cuando se pasa el mouse, este subraya las palabras*/
+}
+
+header  .textos-header{ /*Modifica el texto de encabezados*/
+    display: flex;
+    height: 500px;
+    width: 100%;
+    align-items: left;/*Esto coloca los encabezados en el centro de la imagen de los reactores alienados a la izquierda*/
+    justify-content: center;/*Coloca el texto justificado alineado al centro de los reactores*/
+    flex-direction: column;/*Pone cada linea del texto una debajo de otra en una columna*/
+    text-align: left; /*tiene valor de center*/
+    margin-left: 50px; /* tiene valor de -290*/
+    
+}
+
+.textos-header  h1{
+    font-size: 45px;
+    color: hsla(0, 0%, 96%, 0.966) ;
+    margin-bottom: 10px;    
+}
+.textos-header h2{
+    /*line-height: ;*/    
+    line-height: 0vmin;
+    font-size: 30px;
+    font-weight: 300;
+    color: hsl(190, 20%, 82%);  
+    margin-bottom: 15px;
+    
+}
+.textos-header h3{
+    line-height: 0vmin;
+    font-size: 20px;
+    font-weight: 300;
+    color: hsl(190, 20%, 82%);  
+    
+    
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+/*ABOUT ME*/
+
+.about-me{
+    background: hsl(190, 20%, 82%);
+    padding: 10px 130px 50px 140px;
+    width: 90%;
+}
+
+.about-me .contenido-textos{
+    font-family:sans-serif;
+    font-size: 16px;
+    text-align: justify;
+}
+.contenedor-about-me{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.imagen-about-me{
+    width: 48%;
+    height: 300px;
+    border-radius: 10px;
+}
+.imagen-about-me   .contenido-textos{
+    width: 48%;
+        
+}
+.about-me   .contenido-textos{
+    width: 48%;
+    margin-right: 25px;
+}
+/*Finaliza about me/
+/*My experience*/
+
+.my-experience{
+    background: hsl(210, 100%, 13%);
+    padding: 10px 130px 20px 140px;
+    width: 90%;
+}
+.exp-titulo{
+
+    color: hsl(190, 20%, 82%);
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;/*margin bottom para dividir del contenido de cada sección*/
+    background: hsl(210, 100%, 13%);
+}
+.contenedor.miexperiencia{
+    padding: 30 0 60 0;   
+    /*padding: 10px 130px 20px 140px;    */
+    width: 90%;   
+   
+}
+
+.contenedor-my-experience{/*reparte la imagen a la izquierda y el texto a la derecha*/    
+    display: flex;
+    justify-content: space-around;      
+} 
+.imagen-my-experience{/*Es el tamaño de la imagen*/
+    
+    width: 48%;
+    height: 400px;
+    border-radius: 5px;
+}
+.imagen-my-experience   .contenido-textos{
+    
+    width: 48%;
+}
+.my-experience   .contenido-textos{
+    
+    width: 48%;
+}
+
+.contenido-textos   h3{
+    
+    margin-top: 5px;
+    margin-bottom: 15px;
+    color: hsl(190, 20%, 82%);/*color de fuente*/
+}
+
+.contenido-textos   h3  span{/*el span es el circulo con el número*/
+    background: hsla(94, 65%, 45%, 0.788);/*fondo*/
+    color: white;/*color de fuente*/
+    border-radius: 50%;
+    display: inline-block;/*que este alineado */
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px hsla(198, 6%, 67%, 0.705);/*El sombreado del circulo*/
+    margin-right: 5px;/*separación respecto al h3*/
+}
+
+.contenido-textos p{
+    
+    padding: 0px 0px 30px 15px;/*Son los márgenes del parrafo h3*/
+    font-weight: 300;
+    text-align: justify;
+    color: hsl(190, 20%, 82%);
+    font-family:sans-serif;
+    font-size: 16px;
+    
+}    
+
+/*Vamos a borrad de aqui para arriba*/
+
+
+/*GALERIA Certificados*/
+.my-courses{
+    background: hsl(198, 6%, 67%);
+}
+
+.galeria-port{/*para hacer un flexbox-Buscar que shoy con esto*/
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imagen-port{
+    border-radius: 20px;
+    width: 20%;
+    height: 200px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor:pointer;
+    box-shadow: 0 0 6x 0 hsla(210, 100%, 13%, 0.5);
+   
+
+}
+
+.imagen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    transform: scale(0);
+    /*background: hsla(241, 88%, 27%, 0.705);*/
+    background: hsla(210, 100%, 13%, 0.788);
+    transition: transform 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hover-galeria img{
+    margin-top: 10%;
+    width: 150px;
+}
+
+.hover-galeria p{
+    font-size: 12px;
+    font-weight:30;
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.imagen-port:hover  .hover-galeria{
+    transform: scale(1);
+}
+.information-courses{
+    font-family: sans-serif;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/*footer*/
+footer{
+    background: #414144;
+    padding: 40px 0 30px 0 ;/*0 arriba, 0 derecha 30 abajo y 0 izquuierda*/
+    margin:auto;
+    overflow:hidden;
+}
+
+.contenedor-footer{
+    display: flex;/**/
+    width: 90%;
+    justify-content: space-evenly;/*Se reparten los elementos equitativamente*/
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+.content-foo{
+text-align: center;
+}
+.content-foo h4{
+color: #fff;
+border-bottom: 3px solid  #9e9797 ;
+padding-bottom: 5px;
+margin-bottom: 10px;
+}
+
+.content-foo p{
+color: #ccc;
+}
+
+.content-foo > a{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        color: #ccc;
+        }
+/*.content-foo > img {
+    width:10px;
+    position:fixed;
+    top:10px;
+    right:0;
+}*/
+.titulo-final{
+text-align: center;
+font-size: 24px ;
+margin:20px 0 0 0 ;
+color: #9e9797;
+}
+
+
+/*Para hacerla Responsive - Acople a móviles*/
+@media screen and (max-width:900px){
+    header{
+        background-position: right;
+        text-align: right;   
+    }
+    header  .textos-header{ /*Modifica el texto de encabezados*/
+        display: flex;
+        height: 500px;
+        width: 100%;
+        align-items: center;/*Esto coloca los encabezados en el centro de la imagen de los reactores alienados a la izquierda*/
+        justify-content: center;/*Coloca el texto justificado alineado al centro de los reactores*/
+        flex-direction: column;/*Pone cada linea del texto una debajo de otra en una columna*/
+        text-align: center; 
+        margin-left: 0px;
+    }
+    
+    .about-me{
+        background: hsl(190, 20%, 82%);;
+        padding: 2px 5px 20px 14px;
+        width: 90%;
+    }
+    .contenedor-about-me{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-me .contenido-textos{
+        width: 90%;
+
+    }    
+   .imagen-about-me{
+       width: 90%;
+   }
+   /*My-experience*/
+   .my-experience{
+    padding: 2px 5px 20px 14px;
+    width: 90%;
+   }
+   .contenedor-my-experience{   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.my-experience .contenido-textos{
+    width: 90%;
+}
+.imagen-my-experience{
+    width: 90%
+    ;
+}
+    /*Galeria certificados*/
+    .imagen-port{
+        width: 40%;
+    }
+    .contenedor-footer{
+        flex-direction: column-reverse;
+        align-items: center;
+    }     
+    .content-foo > a {
+        align-items: center;
+    }
+    
+}
+@media screen and (max-width:500px){
+    nav{
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+    nav > a {
+        margin-right: 10px;
+    }
+    .textos-header h1{
+        font-size: 35px;
+    }
+    .textos-header h2{
+        font-size: 20px;
+    }
+    /*About us*/
+    main .about-me{
+        padding: 30px 0 15px 0;
+    }
+    .imagen-about-me{
+        margin-bottom: 60px;
+        width: 99%;
+    }
+    .about-me .contenido-textos{
+        width: 95%;
+    }
+      /*My-experience*/
+   .contenedor-my-experience{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    .my-experience .contenido-textos{
+    width: 90%;
+    }
+    .imagen-my-experience{
+    width: 90%;
+    height: 90%;    
+    }
+    /*Galeria certificados*/
+     .imagen-port{
+         width: 95%;
+     }
+     /*Footer*/
+     .contenedor-footer{
+         flex-direction: column-reverse;
+         align-items: center;
+     }     
+     .content-foo > a {
+         margin-left: 20px;
+     }
+}
